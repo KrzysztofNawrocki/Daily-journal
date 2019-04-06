@@ -1,12 +1,15 @@
+"""
+This is the journal module.
+"""
 import os
 
 
 def load(name):
-    '''
+    """
     This function allows for loading journal from a previously created journal
     :param name: THis base name of the journal to liad
     :return: A new journal data in a new file data.
-    '''
+    """
     data = []
     filename = get_full_path_name(name)
 
@@ -28,7 +31,7 @@ def save(name, journal_data):
 
 
 def get_full_path_name(name):
-    filename = os.path.abspath(os.path.join('.', 'Journal_folder', 'Journals', name + '.jrl'))
+    filename = os.path.abspath(os.path.join('.', 'journals', name + '.jrl'))
     return filename
 
 
